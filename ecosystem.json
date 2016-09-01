@@ -3,7 +3,7 @@
   "apps" : [
     {
       "name"      : "webApp",
-      "script"    : "./bin/www",
+      "script"    : "../bin/www",
       "env_webhook": {
           "port": 3000,
           "path": "/",
