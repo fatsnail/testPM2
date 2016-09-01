@@ -1,0 +1,31 @@
+{
+  
+  apps : [
+    {
+      name      : "webApp",
+      script    : "./bin/www",
+      "env_webhook": {
+          "port": 3000,
+          "path": "/",
+          "secret": "SECRET"
+      },
+      env: {
+        COMMON_VARIABLE: "true"
+      },
+      env_production : {
+        NODE_ENV: "production"
+      }
+    }
+  ],
+
+  deploy : {
+    production : {
+      user : "ubuntu",
+      host : "115.159.41.228",
+      ref  : "origin/master",
+      repo : "git@github.com:fatsnail/testPM2.git",
+      path : "/home/ubuntu/Sites/apps/webApp",
+      post-deploy : "pm2 startOrRestart ecosystem.json --env production"
+    }
+  }
+}
