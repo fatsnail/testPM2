@@ -25,7 +25,7 @@
       ref  : "origin/master",
       repo : "git@github.com:fatsnail/testPM2.git",
       path : "/home/ubuntu/Sites/apps/webApp",
-      post-deploy : "pm2 startOrRestart ecosystem.json --env production"
+      "post-deploy" : "pm2 startOrRestart ecosystem.json --env production"
     }
   }
 }
