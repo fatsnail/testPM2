@@ -6,7 +6,7 @@
       "script"    : "../bin/www",
       "env_webhook": {
           "port": 3000,
-          "path": "/",
+          "path": "/webhook",
           "secret": "SECRET"
       },
       "env": {
